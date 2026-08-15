@@ -4,7 +4,7 @@ A multi-agent courtroom simulation where AI attorneys argue opposing sides and a
 
 ## Research Question
 
-In an adversarial argument setting, is the outcome influenced by how much room each side has to make their case, independent of the actual facts of the dispute? This project runs a controlled experiment: two AI attorneys are given the same underlying scenario but asymmetric word limits (100 vs. 500), and an independent AI judge decides the winner.
+In an adversarial argument setting, is the outcome influenced by how much room each side has to make their case, independent of the actual facts of the dispute? This project runs a controlled experiment: two AI attorneys are given the same underlying scenario but asymmetric word limits (100 vs. 500), and an independent AI judge that decides the winner.
 
 ## How It Works
 
