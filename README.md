@@ -4,7 +4,7 @@ A multi-agent courtroom simulation where AI attorneys argue opposing sides and a
 
 ## Research Question
 
-In an adversarial argument setting, is the outcome influenced by how much room each side has to make their case, independent of the actual facts of the dispute? This project runs a controlled experiment: two AI attorneys are given the same underlying scenario but asymmetric word limits (100 vs. 500), and an independent AI judge that decides the winner.
+In an adversarial argument setting, is the outcome influenced by how much room each side has to make their case, independent of the actual facts of the dispute? This project runs a controlled experiment: two AI attorneys are given the same underlying scenario but asymmetric word limits (100 vs. 500), and an independent AI judge — with no knowledge of which side had more room to argue — decides the winner.
 
 ## How It Works
 
@@ -21,7 +21,7 @@ In an adversarial argument setting, is the outcome influenced by how much room e
 **Key design choices:**
 - Word limits (100 vs. 500) are randomly assigned to each side on every trial, so across the batch, both attorneys spend roughly equal time as the "advantaged" side.
 - The judge never sees which side was given more words — it only sees the two statements.
-- Every judged case is summarized and stored in a ChromaDB vector store, so the judge can optionally retrieve similar precedent cases for genuinely complex disputes (agentic tool use).
+- Every judged case is summarized and stored in a ChromaDB vector store, so the judge can optionally retrieve similar precedent cases for genuinely complex disputes (agentic tool use, not a hardcoded lookup).
 - Local inference via [Ollama](https://ollama.com) (`qwen3:8b`) — no external API costs, fully self-contained.
 
 ## Tech Stack
@@ -137,9 +137,10 @@ judge_agent/
 ├── reset_db.py                  # reset trials database
 ├── analysis.py                   # statistical analysis + chart generation
 ├── api.py                         # FastAPI async REST API
-└── results/
-    ├── trials.db                  # raw trial data (176 trials)
-    └── win_rate_chart.png          # results chart
+├── results/
+│   ├── trials.db                  # raw trial data (176 trials)
+│   └── win_rate_chart.png          # results chart
+└── precedent_db/                   # ChromaDB persistent vector store (precedent case data)
 ```
 
 ## License
