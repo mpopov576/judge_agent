@@ -8,6 +8,8 @@ In an adversarial argument setting, is the outcome influenced by how much room e
 
 ## How It Works
 
+![Pipeline diagram](results/pipeline_diagram.png)
+
 ```
 1. Scenario Generator  →  generates a balanced, realistic legal dispute
 2. Client Accounts      →  generates messy, biased "raw" client accounts for each side
