@@ -43,7 +43,7 @@ In an adversarial argument setting, is the outcome influenced by how much room e
 | Verdicts parsed | 174 (2 excluded — verdict format could not be parsed) |
 | Attorney A wins | 89 |
 | Attorney B wins | 85 |
-| **Win rate for the side with more words** | **82.2%** |
+| **Win rate for the side with more words** | **82.1%** |
 | 95% confidence interval | [75.8%, 87.2%] |
 | p-value (binomial test vs. 50% chance) | < 0.0001 |
 
