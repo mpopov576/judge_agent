@@ -10,16 +10,6 @@ In an adversarial argument setting, is the outcome influenced by how much room e
 
 ![Pipeline diagram](results/judge_agent_pipeline.png)
 
-```
-1. Scenario Generator  →  generates a balanced, realistic legal dispute
-2. Client Accounts      →  generates messy, biased "raw" client accounts for each side
-3. Attorney A / B       →  each attorney turns their client's account into a
-                            formal courtroom statement, under an assigned word limit
-4. Judge                →  reads both statements, optionally retrieves similar
-                            past cases via a vector database (RAG), and renders a verdict
-5. Result Logger        →  stores every trial (statements, word counts, verdict) in SQLite
-```
-
 **Key design choices:**
 - Word limits (100 vs. 500) are randomly assigned to each side on every trial, so across the batch, both attorneys spend roughly equal time as the "advantaged" side.
 - The judge never sees which side was given more words — it only sees the two statements.
