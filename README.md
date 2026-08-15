@@ -8,7 +8,7 @@ In an adversarial argument setting, is the outcome influenced by how much room e
 
 ## How It Works
 
-![Pipeline diagram](results/pipeline_diagram.png)
+![Pipeline diagram](results/judge_agent_pipeline.png)
 
 ```
 1. Scenario Generator  →  generates a balanced, realistic legal dispute
