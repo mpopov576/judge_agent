@@ -21,7 +21,7 @@ In an adversarial argument setting, is the outcome influenced by how much room e
 **Key design choices:**
 - Word limits (100 vs. 500) are randomly assigned to each side on every trial, so across the batch, both attorneys spend roughly equal time as the "advantaged" side.
 - The judge never sees which side was given more words — it only sees the two statements.
-- Every judged case is summarized and stored in a ChromaDB vector store, so the judge can optionally retrieve similar precedent cases for genuinely complex disputes (agentic tool use, not a hardcoded lookup).
+- Every judged case is summarized and stored in a ChromaDB vector store, so the judge can optionally retrieve similar precedent cases for genuinely complex disputes (agentic tool use).
 - Local inference via [Ollama](https://ollama.com) (`qwen3:8b`) — no external API costs, fully self-contained.
 
 ## Tech Stack
